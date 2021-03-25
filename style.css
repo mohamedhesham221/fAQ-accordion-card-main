@@ -163,6 +163,7 @@ img[alt=arrow] {
         z-index: 999;
     }
     .faq_contents {
+        text-align: left;
         width: 50%;
     }
 }
@@ -170,6 +171,9 @@ img[alt=arrow] {
     .faq {
         background: url('images/bg-pattern-desktop.svg') no-repeat 258% 57%, #fff;
         width: 725px;
+    }
+    .faq_contents {
+        text-align: left;
     }
     #image_box {
         left: 22px;
@@ -182,6 +186,9 @@ img[alt=arrow] {
     #image_box {
         left: 230px !important;
     }
+    .faq_contents {
+        text-align: left;
+    }
 }
 
 @media only screen and (min-width: 1350px) {
@@ -190,6 +197,9 @@ img[alt=arrow] {
     }
     #image_box {
         left: 200px;
+    }
+    .faq_contents {
+        text-align: left;
     }
 
 }
