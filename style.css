@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(273, 75%, 66%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 125px 15px 0;
+}
+.faq {
+    /*width: 290px
+        height: 445px
+    */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: auto;
+    position: relative;
+}
+
+#image_mobile {
+    width: calc(100% - 65px);
+    filter: drop-shadow(0 30px 0 #ebebeb);
+    position: absolute;
+    top: -90px;
+    left: 20px;
+}    
+#image_desktop, #image_box {
+    display: none;
+}
+.faq_contents {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 115px 15px 0;
+
+}
+
+.heading {
+    color: hsl(237, 12%, 33%);
+    margin-bottom: 15px;
+}
+
+.question_answers {
+    width: 100%;
+    min-height: 40px;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    position: relative;
+    overflow-y: hidden;
+}
+.questionOne,
+.questionTwo,
+.questionThree,
+.questionFour,
+.questionFive {
+    font-size: .8rem;
+    margin-bottom: 12px;
+    color: hsl(240, 6%, 50%);
+    cursor: pointer;
+}
+.answerOne,
+.answerTwo,
+.answerThree,
+.answerFour,
+.answerFive {
+    display: none;
+    font-size: .7rem;
+    color: hsl(240, 6%, 50%);
+}
+img[alt=arrow] {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    cursor: pointer;
+    transition: all .3s linear;
+    transform: rotate(180deg); 
+}
+#toggleOne,
+#toggleTwo,
+#toggleThree,
+#toggleFour,
+#toggleFive {
+    display: none;    
+}
+#toggleOne:checked + label > img,
+#toggleTwo:checked + label > img,
+#toggleThree:checked + label > img,
+#toggleFour:checked + label > img,
+#toggleFive:checked + label > img {
+    transform: rotate(360deg);
+}
+#toggleOne:checked + label > .answerOne,
+#toggleTwo:checked + label > .answerTwo,
+#toggleThree:checked + label > .answerThree,
+#toggleFour:checked + label > .answerFour,
+#toggleFive:checked + label > .answerFive {
+    display: block ;
+}
+#toggleOne:checked + label > .questionOne,
+#toggleTwo:checked + label > .questionTwo,
+#toggleThree:checked + label > .questionThree,
+#toggleFour:checked + label > .questionFour,
+#toggleFive:checked + label > .questionFive {
+    color: hsl(237, 12%, 33%);
+    font-weight: bold;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+@media only screen and (min-width: 375px) {
+    #image_mobile {
+        top: -120px;
+    }
+}
+@media only screen and (min-width: 425px) {
+    #image_mobile {
+        width: calc(100% - 100px);
+        top: -126px;
+        left: 35px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .faq {
+        height: 500px;
+        display: flex;
+        justify-content: flex-end;    
+        overflow-x: hidden;
+        background: url('images/bg-pattern-desktop.svg') no-repeat 297% 68%, #fff;
+    }
+    #image_mobile {
+        display: none;
+    }
+    #image_desktop {
+        display: block;
+        display: block;
+        width: 400px;
+        position: absolute;
+        top: 90px;
+        left: -75px;
+    
+    }
+    #image_box {
+        display: block;
+        position: absolute;
+        top: 304px;
+        left: -90px;
+        z-index: 999;
+    }
+    .faq_contents {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .faq {
+        background: url('images/bg-pattern-desktop.svg') no-repeat 258% 57%, #fff;
+        width: 725px;
+    }
+    #image_box {
+        left: 22px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .faq{
+        background: url('images/bg-pattern-desktop.svg') no-repeat 271% 58%, #fff;
+    }
+    #image_box {
+        left: 230px !important;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .faq {
+        background: url('images/bg-pattern-desktop.svg') no-repeat 273% 67%, #fff;
+    }
+    #image_box {
+        left: 200px;
+    }
+
+}
